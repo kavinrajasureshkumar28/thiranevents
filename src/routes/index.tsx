@@ -1,24 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Eventide — Event Management & Registration System" },
+      {
+        name: "description",
+        content:
+          "Premium event management and registration platform for administrators and participants.",
+      },
+      { property: "og:title", content: "Eventide — Event Management System" },
+      {
+        property: "og:description",
+        content:
+          "Premium event management and registration platform for administrators and participants.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useEffect(() => {
+    window.location.replace("/ems/index.html");
+  }, []);
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div style={{ minHeight: "100vh", background: "#09090B", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "system-ui" }}>
+      Loading Eventide…
     </div>
   );
 }
