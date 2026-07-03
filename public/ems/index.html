@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Eventide — Select Your Role</title>
+<meta name="description" content="Premium event management and registration platform. Choose your role to continue." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body class="landing-body">
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <header class="landing-nav">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <span class="brand-name">Eventide</span>
+    </div>
+    <nav class="landing-nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="./participant.html">Browse Events</a>
+    </nav>
+  </header>
+
+  <main class="landing-main">
+    <section class="landing-hero">
+      <div class="chip">✦ Event Management, reimagined</div>
+      <h1>Select your role<br /><span class="grad-text">to continue.</span></h1>
+      <p class="lead">A premium platform to create, discover and manage events end-to-end. Built for organizers who care about detail.</p>
+    </section>
+
+    <section class="role-grid" id="roleGrid">
+      <button class="role-card glass" data-role="admin" aria-label="Administrator">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="role-body">
+          <h3>Administrator</h3>
+          <p>Full control. Manage events, participants, attendance and analytics.</p>
+        </div>
+        <span class="role-arrow">→</span>
+      </button>
+
+      <button class="role-card glass" data-role="participant" aria-label="Participant">
+        <div class="role-icon accent-purple">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        </div>
+        <div class="role-body">
+          <h3>Participant</h3>
+          <p>Browse events, register instantly and track your registration status.</p>
+        </div>
+        <span class="role-arrow">→</span>
+      </button>
+    </section>
+
+    <!-- Admin login modal -->
+    <div class="modal-backdrop" id="loginModal" aria-hidden="true">
+      <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="modal-close" id="loginClose" aria-label="Close">×</button>
+        <div class="modal-head">
+          <div class="role-icon small"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/></svg></div>
+          <div>
+            <h2 id="loginTitle">Administrator Login</h2>
+            <p class="muted">Enter your credentials to access the dashboard.</p>
+          </div>
+        </div>
+        <form id="loginForm" class="form" novalidate>
+          <label class="field">
+            <span>Username</span>
+            <input type="text" name="username" autocomplete="username" required placeholder="your username" />
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input type="password" name="password" autocomplete="current-password" required placeholder="••••••••" />
+          </label>
+          <div class="login-error" id="loginError" role="alert" aria-live="polite"></div>
+          <button type="submit" class="btn btn-primary btn-block">Sign in to Dashboard</button>
+          <p class="hint muted">Hint: use the credentials provided to you by the event organizer.</p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <section class="landing-features" id="features">
+    <div class="feature glass">
+      <h4>Beautiful dashboards</h4>
+      <p>Live stats, charts and quick actions in one calm surface.</p>
+    </div>
+    <div class="feature glass">
+      <h4>Instant registration</h4>
+      <p>Zero-friction sign up with automatic ID generation.</p>
+    </div>
+    <div class="feature glass">
+      <h4>Attendance & exports</h4>
+      <p>Mark attendance, filter, and export CSV in one click.</p>
+    </div>
+  </section>
+
+  <footer class="landing-footer" id="about">
+    <span>© <span id="year"></span> Eventide. Crafted with care.</span>
+    <span class="muted">Built with HTML · CSS · Vanilla JS</span>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./scripts/data.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
