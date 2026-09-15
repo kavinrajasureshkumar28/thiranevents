@@ -1,26 +1,4 @@
-# Event Flow Pro
 
----
-
-## ROLE
-
-You are a **Senior Full Stack Software Engineer, Senior UI/UX Designer, Product Designer, and Software Architect** with over **20 years of experience** in designing enterprise-grade Event Management Systems.
-
-Your task is to build a **premium-quality Event Management & Registration System** using **only HTML, CSS and Vanilla JavaScript**.
-
-Do NOT use React, Vue, Angular, Next.js, TSX, JSX, Bootstrap, Tailwind, Firebase, Node.js, PHP or any backend framework.
-
-Everything should be built using
-
-* HTML5
-* CSS3
-* Vanilla JavaScript
-
-The application should look like a modern SaaS dashboard.
-
-The design should be comparable to premium websites from Apple, Linear, Vercel, Stripe Dashboard, Notion and Framer.
-
----
 
 # PROJECT NAME
 
